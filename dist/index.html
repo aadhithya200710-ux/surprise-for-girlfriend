@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Happy Birthday Muhsii! ✨❤️</title>
+  <meta name="description" content="A magical birthday surprise created especially for Muhsii by Aadhiii ❤️" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Great+Vibes&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script type="module" crossorigin src="/assets/index-AyiBjRZU.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CGi4xt-2.css">
+</head>
+<body>
+  <!-- Ambient Particle Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Audio Context FX / Sound Container -->
+  <div id="fx-container"></div>
+
+  <!-- Main Web App Journey Container -->
+  <main id="app">
+
+    <!-- 1. WELCOME SECTION -->
+    <section id="section-welcome" class="section active">
+      <div class="glass-card welcome-card">
+        <div class="sparkle-badge">✨ Special Surprise</div>
+        <h1 class="welcome-title">Hey Muhsii... <span class="heart-pulse">❤️</span></h1>
+        <p class="welcome-subtitle">Someone prepared a little surprise for you...</p>
+        <button id="btn-start" class="btn btn-glow">Start Your Surprise ✨</button>
+      </div>
+    </section>
+
+    <!-- 2. BALLOON MEMORY SURPRISE -->
+    <section id="section-balloon" class="section hidden">
+      <div class="section-header">
+        <span class="section-tag">🎈 Floating Memories</span>
+        <h2 class="section-title">Tap a balloon to pop & reveal a memory! ✨</h2>
+      </div>
+
+      <!-- Balloon Sky Grid -->
+      <div id="balloon-container" class="balloon-grid">
+        <!-- Balloons dynamically injected or styled -->
+      </div>
+
+
+
+      <!-- Balloon Complete Banner -->
+      <div id="balloon-complete-box" class="complete-box hidden">
+        <h3 class="complete-text">Every memory is special. ❤️</h3>
+        <button id="btn-balloon-next" class="btn btn-glow">Continue ✨</button>
+      </div>
+    </section>
+
+    <!-- 3. CANDLE BLOWING -->
+    <section id="section-candle" class="section hidden">
+      <div class="section-header">
+        <span class="section-tag">🎂 Birthday Cake</span>
+        <h2 class="section-title">Make a wish... 🎂✨</h2>
+      </div>
+
+      <div class="cake-stage">
+        <!-- Cake Graphic -->
+        <div class="cake-wrapper">
+          <div class="cake-plate"></div>
+          <div class="cake-body">
+            <div class="cake-layer layer-bottom"></div>
+            <div class="cake-layer layer-top"></div>
+            <div class="cake-frosting"></div>
+            <div class="cake-decorations">
+              <span>🌸</span><span>⭐</span><span>✨</span><span>🌸</span>
+            </div>
+          </div>
+          <!-- Candle & Flame -->
+          <div class="candle">
+            <div class="wick"></div>
+            <div id="flame" class="flame burning"></div>
+            <div id="smoke" class="smoke hidden"></div>
+          </div>
+        </div>
+
+        <div id="candle-controls" class="candle-controls">
+          <button id="btn-enable-mic" class="btn btn-glow btn-mic">
+            🎤 Enable Microphone
+          </button>
+          <button id="btn-manual-blow" class="btn btn-outline btn-blow">
+            Blow Candle ✨
+          </button>
+        </div>
+
+        <div id="mic-status" class="status-msg"></div>
+
+        <div id="candle-success" class="candle-success hidden">
+          <h3 class="wish-made-text">Wish made! ✨❤️</h3>
+          <p class="wish-subtext">May all your sweetest dreams come true!</p>
+          <button id="btn-candle-next" class="btn btn-glow">Open Letter 💌</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PERSONAL LETTER -->
+    <section id="section-letter" class="section hidden">
+      <div class="section-header">
+        <span class="section-tag">💌 From The Heart</span>
+        <h2 class="section-title">A little something from Aadhiii... 💌</h2>
+      </div>
+
+      <div class="envelope-wrapper">
+        <div id="envelope" class="envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-pocket"></div>
+          <div class="envelope-seal">❤️</div>
+          
+          <div id="letter-content" class="letter-card hidden">
+            <div class="letter-inner">
+              <span class="letter-date">For My Dearest Muhsii 🎂</span>
+              <p class="letter-paragraph">
+                Unna pathi evlo sollanum nu nenachalum, sila vishayangalukku vaarthaigal pathaadhu. Nee en life-la vandhadhula irundhu, chinna chinna moments kooda romba happy-a maari pochu. Un sirippu paatha pothum, oru naal full-ah evalo kastam irruntha kooda marandhuruven. 🥹
+              </p>
+              <p class="letter-paragraph">
+                Nee santhosama irukkanum eppothume athukkaga naa ennavennalum seiven , edhu nadandhaalum unnakku naa irrrukken kavalapadatha . Naa eppavume un kuda iruppen .Enna nadanthalum unna vittu poga maaten. ✨
+              </p>
+              <p class="letter-paragraph">
+                <strong>Unakku edhu venumnalum, nee thaniya handle pannanum nu ninaikkaadha… naan irukken.</strong><br />
+                <strong>Unakku oru smile theva naalum, oru vaarthai pesanum naalum, summa silent-ah irukkanum naalum… unnakku epo naa theva naalum apo naan iruppen. 🫂</strong>
+              </p>
+              <p class="letter-paragraph">
+                Indha birthday unakku marakka mudiyadha oru azhagana ninaivaa irukkanum.<br />
+                <strong>Eppovume ippadiye sirichittu iru, Muhshii. Adhu dhaan unakku romba azhaga irukkum. ❤️</strong>
+              </p>
+              <p class="letter-signature">
+                With care,<br />
+                <strong class="signature-name">𝓐𝓪𝓭𝓱𝓲𝓲𝓲 ❤️</strong>
+              </p>
+              <button id="btn-letter-next" class="btn btn-glow mt-4">Continue 🎁</button>
+            </div>
+          </div>
+        </div>
+
+        <button id="btn-open-letter" class="btn btn-glow">Open Letter 💌</button>
+      </div>
+    </section>
+
+    <!-- 5. GIFT SURPRISE -->
+    <section id="section-gift" class="section hidden">
+      <div class="section-header">
+        <span class="section-tag">🎁 Surprise Unboxing</span>
+        <h2 class="section-title">I have another surprise for you... 🎁❤️</h2>
+      </div>
+
+      <div class="gift-stage">
+        <div id="gift-box" class="gift-box">
+          <div class="gift-lid">
+            <div class="gift-bow"></div>
+          </div>
+          <div class="gift-body">
+            <div class="gift-ribbon-v"></div>
+            <div class="gift-ribbon-h"></div>
+          </div>
+          <div class="gift-sparkles-burst" id="gift-burst"></div>
+        </div>
+
+        <button id="btn-open-gift" class="btn btn-glow mt-6">Open Gift 🎁</button>
+      </div>
+    </section>
+
+    <!-- 6. DUDU & BUBU HUG -->
+    <section id="section-hug" class="section hidden">
+      <div class="section-header">
+        <span class="section-tag">🧸 Sweet Embrace</span>
+        <h2 class="section-title">Aadhiii & Muhsii ❤️</h2>
+      </div>
+
+      <div class="hug-stage">
+        <div class="ground-line"></div>
+        
+        <!-- Characters Container -->
+        <div class="characters-container">
+          <!-- Dudu (Aadhiii) -->
+          <div id="char-dudu" class="character dudu-start">
+            <img id="img-dudu" src="/png/bubu.png" alt="Dudu (Aadhiii)" class="char-img" />
+            <div class="char-label">Aadhiii</div>
+          </div>
+
+          <!-- Bubu (Muhsii) -->
+          <div id="char-bubu" class="character bubu-start">
+            <img id="img-bubu" src="/png/dudu.png" alt="Bubu (Muhsii)" class="char-img" />
+            <div class="char-label">Muhsii</div>
+          </div>
+        </div>
+
+        <!-- Floating Hug Effects -->
+        <div id="hug-hearts-effect" class="hug-hearts-effect"></div>
+
+        <!-- Emotional Text Card -->
+        <div id="hug-text-box" class="hug-text-box hidden">
+          <p class="hug-quote">
+            "No matter what happens, I’ll always be here for you, always. ❤️"
+          </p>
+          <p class="hug-subquote">
+            Forever yours, <strong>Aadhiii ❤️</strong>
+          </p>
+          <button id="btn-hug-next" class="btn btn-glow">One More Surprise 🎁</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. SONG SURPRISE -->
+    <section id="section-song" class="section hidden">
+      <div class="section-header">
+        <span class="section-tag">🎵 Musical Surprise</span>
+        <h2 class="section-title">A Special Melody For You ✨</h2>
+      </div>
+
+      <div class="music-player-card glass-card">
+        <!-- Vinyl Record Disc -->
+        <div class="vinyl-wrapper">
+          <div id="vinyl-disc" class="vinyl-disc">
+            <div class="vinyl-grooves"></div>
+            <div class="vinyl-label">
+              <span class="music-note-icon">🎵</span>
+            </div>
+          </div>
+          <div id="floating-notes-container" class="floating-notes"></div>
+        </div>
+
+        <!-- Track Info -->
+        <div class="track-info">
+          <h3 class="track-title" id="track-title">Eppadi Vandhaayo (Reprise)</h3>
+          <p class="track-artist">Dedicated to Muhsii by Aadhiii ❤️</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="player-progress-container">
+          <span id="time-current">0:00</span>
+          <div class="progress-bar-bg" id="progress-bar-bg">
+            <div id="progress-fill" class="progress-bar-fill"></div>
+          </div>
+          <span id="time-duration">0:00</span>
+        </div>
+
+        <!-- Controls -->
+        <div class="player-controls">
+          <button id="btn-play-pause" class="btn-play" aria-label="Play or Pause">
+            <span id="play-icon">▶</span>
+          </button>
+          
+          <div class="volume-container">
+            <span class="volume-icon">🔊</span>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.8" aria-label="Volume" />
+          </div>
+        </div>
+
+        <button id="btn-song-next" class="btn btn-glow mt-6">Continue ✨</button>
+
+        <!-- Hidden Audio Element -->
+        <audio id="bg-audio" preload="metadata"></audio>
+      </div>
+    </section>
+
+    <!-- 8. BIRTHDAY WISH -->
+    <section id="section-birthday" class="section hidden">
+      <div class="birthday-banner-card glass-card">
+        <div class="confetti-canvas-container"></div>
+        <div class="cake-icon-header">🎂🎉✨</div>
+        <h1 class="birthday-main-title">HAPPY BIRTHDAY, MUHSII! 🎂🎉❤️</h1>
+
+        <div class="birthday-letter-body">
+          <p>
+            Life-la enna maari changes vandhaalum, days epdi maarinaalum, namma surroundings evlo different-a aanaalum… sila vishayangal mattum maarave maaradhu. Adhula onnu nee enakku evlo important-nu naan nenaikkuradhu. 🥹
+          </p>
+          <p>
+            Unakku ellame perfect-ah irukkura days-la mattum illa…<br />
+            edhuvum seriyaa pogala nu thonura days-layum, nee romba tired-ah irukkura moments-layum, pesa vaarthaiye illaama silent-ah irukkura nerathulayum… un pakkathula oru epavume intha Aadhiii oda presence irukkum.
+          </p>
+          <p>
+            <strong>Unakku edhaavadhu achieve pannumbodhu santhosama celebrate pandra oruthana....</strong><br />
+            <strong>Nee fail aanaalum, “parava illa… next time paathukalaam” nu sollura oruthana.....</strong><br />
+            <strong>Nee confused-ah irrukkum pothu, unakkaga time eduthu kekkura oruthana.....</strong>
+          </p>
+          <p>
+            <strong>Ipadi ella nerathulaiyum ellamavum naa kuda irrupen .❤️</strong>
+          </p>
+          <p>
+            Un life-la enna nadandhaalum unnakkaga un kuda irrunthu naa unna paathupen. 🫂
+          </p>
+          <p>
+            <strong>Adhu dhaan naan unakku kudukka virumbura oru nambikkai.</strong>
+          </p>
+          <p>
+            <strong>Indha birthday unakku oru birthday mattum illaama, romba naal nyabagam vachirukka koodiya oru azhagana ninaivaa irukkanum. 🥹🎂✨</strong>
+          </p>
+          <p>
+            <strong>Eppovume ippadiye iru, Muhsii…</strong><br />
+            <strong>Un sirippu mattum maarama irukkattum. ❤️</strong>
+          </p>
+          <p class="birthday-sign-off">
+            — <strong>Aadhiii ❤️</strong>
+          </p>
+        </div>
+
+        <button id="btn-birthday-next" class="btn btn-glow">One Last Surprise 🎬❤️</button>
+      </div>
+    </section>
+
+    <!-- 9. FINAL VIDEO -->
+    <section id="section-video" class="section hidden">
+      <div class="section-header">
+        <span class="section-tag">🎬 Special Video</span>
+        <h2 class="section-title">A Journey Of Memories ❤️</h2>
+      </div>
+
+      <div class="video-card glass-card">
+        <div class="video-wrapper">
+          <video id="final-video-player" controls preload="metadata" playsinline>
+            <source src="/video/use_this_image_as_reference_br.mp4" type="video/mp4" />
+            <source src="/video/final-video.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+
+        <div id="video-ending-credits" class="video-credits hidden">
+          <p class="credit-line">Every memory with you is special. ❤️</p>
+          <p class="credit-line">Thank you for being part of this beautiful journey, Muhsii. ✨</p>
+          <p class="credit-sub">With care, <strong>𝓐𝓪𝓭𝓱𝓲𝓲𝓲 ❤️</strong></p>
+          <div class="credit-badge">Made especially for Muhsii ❤️ By 𝓐𝓪𝓭𝓱𝓲𝓲𝓲 ✨</div>
+          
+          <button id="btn-video-next" class="btn btn-glow mt-6">Finish Journey ✨</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. FINAL ENDING -->
+    <section id="section-ending" class="section hidden">
+      <div class="glass-card ending-card">
+        <div class="ending-heart">💖</div>
+        <h2 class="ending-title">That's all for now, Muhsii... ❤️</h2>
+        <p class="ending-subtitle">Happy Birthday once again! 🎂✨</p>
+        <div class="ending-signature">
+          With care,<br />
+          <strong class="signature-name-large">𝓐𝓪𝓭𝓱𝓲𝓲𝓲 ❤️</strong>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Single Memory View Overlay (placed at body level for absolute viewport centering) -->
+  <div id="memory-overlay" class="memory-overlay hidden">
+    <div class="memory-card">
+      <div class="memory-img-wrapper">
+        <img id="memory-img" src="" alt="Sweet Memory" />
+      </div>
+      <p id="memory-caption" class="memory-caption">A sweet memory together ❤️</p>
+      <div class="timer-bar"><div id="timer-progress" class="timer-progress"></div></div>
+    </div>
+  </div>
+
+</body>
+</html>
